@@ -1,10 +1,115 @@
+/* GENERAL */
 :root {
-    --black: #000000;
-    --white: #ffffff;
-    --blue: #2D64E6;
-    --red: #CD3D0F;
-    --grey: #7A7A7A;
-  }
-html{
-    font-family: Arial, Helvetica, sans-serif;
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #2d64e6;
+  --red: #cd3d0f;
+  --grey: #7a7a7a;
+  --dark-grey: #363636;
+  --large: 46px;
+  --normal: 20px;
+  --medium: 500;
 }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  font-size: var(--normal);
+  font-weight: var(--medium);
+}
+h1 {
+  font-size: var(--large);
+}
+button.btn {
+  border-radius: 20px;
+  font-weight: var(--medium);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ----HEADER---- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+.header-top {
+  background-color: var(--black);
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#sony-logo {
+  width: 80px;
+  margin-right: 10px;
+}
+#sony-logo img {
+  width: 100%;
+  height: 100%;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black);
+  font-weight: var(--medium);
+}
+.dropdown-toggle::after {
+  color: var(--grey);
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--blue);
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:hover.dropdown-toggle::after {
+  color: var(--blue);
+}
+#accedi {
+  background-color: var(--dark-grey);
+  border: 1px solid var(--black);
+}
+#accedi:hover {
+  opacity: 0.8;
+}
+#lens {
+  height: 40px;
+  line-height: 40px;
+  margin-left: 20px;
+}
+
+/* ---- MAIN ---- */
+main {
+  margin-top: 100px;
+}
+
+/* JUMBOTRON */
+#jumbotron {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background: url(../img/jumbo-bg.png) center center no-repeat;
+  background-size: cover;
+}
+#jumbotron .container {
+  height: 100%;
+}
+#returnal-logo {
+  width: 50%;
+  min-width: 270px;
+}
+button#acquista {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: var(--red);
+}
+
+/* MEDIA QUERIES */
+@media  screen and (min-width: 960px){
+    #jumbotron .container{
+        max-width: 50%;     
+        margin-left: 0;
+    }
+}
+    
