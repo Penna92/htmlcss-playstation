@@ -1,0 +1,10 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #2D64E6;
+    --red: #CD3D0F;
+    --grey: #7A7A7A;
+  }
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
