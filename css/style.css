@@ -29,6 +29,7 @@ button.btn {
 }
 button.btn:hover {
   box-shadow: 0px 0px 0px 3px var(--black) inset;
+  opacity: 0.8;
 }
 .card {
   border-radius: 20px;
@@ -91,9 +92,6 @@ header {
   background-color: var(--dark-grey);
   border: 2px solid var(--dark-grey);
 }
-#accedi:hover {
-  opacity: 0.8;
-}
 #lens {
   height: 40px;
   line-height: 40px;
@@ -104,6 +102,7 @@ header {
 main {
   margin-top: 100px;
 }
+
 /* JUMBOTRON */
 #jumbotron {
   width: 100%;
@@ -133,7 +132,7 @@ button#acquista {
 #more-info {
   background-color: var(--blue);
   border: 2px solid var(--blue);
-  width: fit-content
+  width: fit-content;
 }
 .ps5-component {
   border-bottom: 3px solid transparent;
@@ -157,28 +156,37 @@ button#acquista {
 }
 button#acquista {
   width: fit-content;
-  border-radius: 20px;
   background-color: var(--red);
   border: 2px solid var(--red);
 }
 /* SECTION GAME CARDS */
-#game-cards{
-    background-color: var(--dark-grey);
+#game-cards {
+  background-color: var(--dark-grey);
 }
+#game-cards img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* SECTION PLAYSTATION 4 */
+button#scopri {
+  border: 2px solid var(--blue);
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
-  #returnal-logo{
-    max-width: 20%;    
+  #returnal-logo {
+    max-width: 20%;
   }
   #jumbotron p,
   #jumbotron h1 {
     max-width: 30%;
   }
-  #it-takes-two-logo{
-    max-width:20%;    
+  #it-takes-two-logo {
+    max-width: 20%;
   }
   #it-takes-two p,
-  #it-takes-two h1{
-    max-width:30%;
+  #it-takes-two h1 {
+    max-width: 30%;
   }
 }
