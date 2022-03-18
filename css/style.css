@@ -143,6 +143,25 @@ button#acquista {
   border-bottom: 3px solid var(--blue);
 }
 
+/* SECTION IT TAKES TWO */
+#it-takes-two {
+  width: 100%;
+  background: url(../img/it-takes-two-hero-banner-desktop.jpg) center center
+    no-repeat;
+  background-size: cover;
+}
+#it-takes-two-logo {
+  width: 50%;
+  min-width: 270px;
+  margin-top: 30px;
+}
+button#acquista {
+  width: fit-content;
+  border-radius: 20px;
+  background-color: var(--red);
+  border: 2px solid var(--red);
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 960px) {
   #jumbotron .container {
