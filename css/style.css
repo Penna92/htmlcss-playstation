@@ -7,7 +7,7 @@
   --grey: #7a7a7a;
   --dark-grey: #363636;
   --large: 46px;
-  --normal: 20px;
+  --normal: 18px;
   --medium: 500;
 }
 html {
@@ -46,6 +46,7 @@ button.btn:hover {
 #store p {
   color: var(--grey);
 }
+
 /* ----HEADER---- */
 header {
   position: fixed;
@@ -106,15 +107,13 @@ main {
 /* JUMBOTRON */
 #jumbotron {
   width: 100%;
-  height: calc(100vh - 100px);
+  margin-top: 100px;
   background: url(../img/jumbo-bg.png) center center no-repeat;
   background-size: cover;
 }
-#jumbotron .container {
-  height: 100%;
-}
 #returnal-logo {
   width: 50%;
+  margin-top: 200px;
   min-width: 270px;
 }
 button#acquista {
@@ -134,6 +133,7 @@ button#acquista {
 #more-info {
   background-color: var(--blue);
   border: 2px solid var(--blue);
+  width: fit-content
 }
 .ps5-component {
   border-bottom: 3px solid transparent;
@@ -161,11 +161,24 @@ button#acquista {
   background-color: var(--red);
   border: 2px solid var(--red);
 }
-
+/* SECTION GAME CARDS */
+#game-cards{
+    background-color: var(--dark-grey);
+}
 /* MEDIA QUERIES */
-@media screen and (min-width: 960px) {
-  #jumbotron .container {
-    max-width: 50%;
-    margin-left: 0;
+@media screen and (min-width: 992px) {
+  #returnal-logo{
+    max-width: 20%;    
+  }
+  #jumbotron p,
+  #jumbotron h1 {
+    max-width: 30%;
+  }
+  #it-takes-two-logo{
+    max-width:20%;    
+  }
+  #it-takes-two p,
+  #it-takes-two h1{
+    max-width:30%;
   }
 }
