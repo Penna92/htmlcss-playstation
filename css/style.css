@@ -166,6 +166,7 @@ button#acquista {
   background-color: var(--red);
   border: 2px solid var(--red);
 }
+
 /* SECTION GAME CARDS */
 #game-cards {
   background-color: var(--dark-grey);
@@ -216,6 +217,7 @@ button#scopri {
   cursor: pointer;
   transition: transform 0.5s;
 }
+
 /* SECTION PLAYSTATION NOW */
 #playstation-now {
   background-color: #161c3b;
@@ -241,6 +243,46 @@ button#scopri {
 #playstation-now-image img {
   height: 100%;
 }
+
+/* SECTION SOCIAL */
+#social img{
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#social img:hover{
+  transform: scale(1.1);
+}
+
+/* ----FOOTER---- */
+footer{
+  background-color: var(--blue);
+}
+footer svg{
+  cursor: pointer;
+}
+footer a:hover{
+  opacity: 0.7;
+}
+
+/* TOP FOOTER */
+.site-footer__categories>ul>li{
+  list-style: none;
+}
+.site-footer__categories>ul>li>a {
+  color: white;
+  text-decoration: none;
+  font-weight: var(--medium);
+}
+
+/* BOTTOM FOOTER */
+#bottom-footer img{
+  width: 150px;
+}
+#copyright-text{
+  font-size: 16px;
+  font-weight: 400;
+}
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
   #returnal-logo {
@@ -257,6 +299,9 @@ button#scopri {
   #it-takes-two h1 {
     max-width: 30%;
   }
+  #bottom-footer{
+    width: 50%;
+  }
 }
 @media screen and (min-width: 768px) {
   #playstation-plus-description,
@@ -266,4 +311,29 @@ button#scopri {
     width: 50%;
     display: inline-block;
   }
+  #top-footer{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+  .footer-countries{
+    width: 50%;
+  }
+  .site-footer__categories{
+    width: 50%;
+    justify-content: space-around;
+  }
 }
+ @media screen and (min-width: 576px ){
+    #social>.container{
+        max-width: 650px;
+    }
+    #social img{
+      max-width: 120px;
+      max-height: 120px;
+  }
+  .site-footer__categories{
+    width: 100%;
+    display: flex;
+  }
+} 
