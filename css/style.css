@@ -6,6 +6,7 @@
   --red: #cd3d0f;
   --grey: #7a7a7a;
   --dark-grey: #363636;
+  --light-grey: #bebcbb;
   --large: 46px;
   --normal: 18px;
   --medium: 500;
@@ -26,10 +27,11 @@ button.btn {
   border: none;
   padding-top: 10px;
   padding-bottom: 10px;
+  transition: transform 0.2s;
 }
 button.btn:hover {
-  box-shadow: 0px 0px 0px 3px var(--black) inset;
-  opacity: 0.8;
+  box-shadow: 0px 0px 0px 3px var(--white) inset;
+  transform: scale(1.1);
 }
 .card {
   border-radius: 20px;
@@ -37,6 +39,8 @@ button.btn:hover {
   margin-top: 20px;
   border: 3px solid transparent;
   cursor: pointer;
+  position: relative;
+  transition: top ease 0.5s;
 }
 #playstation-5 img,
 #game-cards img {
@@ -125,6 +129,9 @@ button#acquista {
 /* SECTION PLAYSTATION 5 */
 #playstation-5 .card:hover {
   border: 3px solid var(--blue);
+  top: -10px;
+  box-shadow: 10px 10px 5px var(--grey);
+  opacity: 0.8;
 }
 #blue-subtitle {
   color: #4598db;
@@ -163,9 +170,13 @@ button#acquista {
 #game-cards {
   background-color: var(--dark-grey);
 }
-#game-cards img:hover {
+#game-cards img {
   cursor: pointer;
+  transition: transform 0.2s;
+}
+#game-cards img:hover {
   opacity: 0.5;
+  transform: scale(1.1);
 }
 
 /* SECTION PLAYSTATION 4 */
@@ -173,6 +184,28 @@ button#scopri {
   border: 2px solid var(--blue);
 }
 
+/* SECTION PLAYSTATION PLUS */
+#playstation-plus {
+  background-color: var(--light-grey);
+}
+#playstation-plus-description {
+  padding: 20px 0;
+}
+#playstation-plus-description img {
+  width: 60%;
+}
+#ps-plus-button {
+  background-color: #d9dadc;
+  color: var(--blue);
+  border: 2px solid #d9dadc;
+  width: fit-content;
+}
+#playstation-plus-image {
+  display: none;
+}
+#playstation-plus-image img {
+  height: 100%;
+}
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
   #returnal-logo {
@@ -188,5 +221,12 @@ button#scopri {
   #it-takes-two p,
   #it-takes-two h1 {
     max-width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #playstation-plus-description,
+  #playstation-plus-image {
+    width: 50%;
+    display: inline-block;
   }
 }
