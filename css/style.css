@@ -309,6 +309,39 @@ footer a:hover {
   font-weight: 400;
 }
 
+/* ----PAGINA GIOCHI.HTML---- */
+
+#jumbotron-giochi {
+  margin-top: 100px;
+  height: calc(100vh - 100px);
+  background-image: url(../img/games-wall-jumbotron.jpg);
+  background-size: cover;
+}
+.centered {
+  width: 50%;
+  min-width: 250px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#jumbotron-giochi .container {
+  height: 100%;
+}
+#ps5-svg-logo {
+  filter: invert(1);
+  width: 200px;
+}
+#jumbotron-giochi p {
+  color: var(--light-grey);
+}
+#video {
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  animation: none;
+}
+#video:hover {
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.9) inset;
+  transform: none;
+}
+
 /* ----MEDIA QUERIES---- */
 @media screen and (min-width: 992px) {
   #returnal-logo {
