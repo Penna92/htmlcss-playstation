@@ -40,7 +40,7 @@ button.btn:hover {
   border: 3px solid transparent;
   cursor: pointer;
   position: relative;
-  transition: top ease 0.5s;
+  transition: top ease-in-out 0.5s;
 }
 #playstation-5 img,
 #game-cards img {
@@ -76,6 +76,12 @@ header {
   width: 100%;
   height: 100%;
 }
+.navbar-nav .dropdown-menu {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    17px 50px 9px 50px rgba(201, 201, 201, 0);
+  box-shadow: 0px 10px 13px -7px #000000,
+    17px 50px 9px 50px rgba(201, 201, 201, 0);
+}
 .navbar-light .navbar-nav .nav-link {
   color: var(--black);
   font-weight: var(--medium);
@@ -83,10 +89,9 @@ header {
 .dropdown-toggle::after {
   color: var(--grey);
 }
-#navbarDropdown:focus:after {
+.nav-link.dropdown-toggle.show:focus:after {
   transform: rotate(180deg);
 }
-
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: var(--blue);
@@ -304,7 +309,7 @@ footer a:hover {
   font-weight: 400;
 }
 
-/* MEDIA QUERIES */
+/* ----MEDIA QUERIES---- */
 @media screen and (min-width: 992px) {
   #returnal-logo {
     max-width: 20%;
@@ -326,13 +331,26 @@ footer a:hover {
   .dropdown-menu {
     position: fixed !important;
     width: 100vw;
-    top: 100px !important;
+    top: 110px !important;
     left: 0 !important;
+    height: auto;
     margin: 0;
     padding: 30px 0;
     border: none;
     border-radius: 0;
     text-align: center;
+    animation: growDown 0.6s ease-in-out forwards;
+  }
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
   }
   ul.dropdown-menu.show {
     width: 100%;
@@ -436,7 +454,7 @@ footer a:hover {
   }
   .dropdown-menu {
     padding: 0;
-    height: 35vh;
+    height: calc(100vh - 110px);
     overflow-y: auto;
   }
   .dropdown-item {
@@ -459,5 +477,35 @@ footer a:hover {
   }
   #navbarDropdown {
     padding: 0 auto;
+  }
+  .navbar-nav .dropdown-menu {
+    position: fixed;
+    left: 140px;
+    top: 110px;
+    z-index: 5000;
+    width: calc(100% - 150px);
+    background: white !important;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      17px 50px 9px 50px rgba(201, 201, 201, 0);
+    box-shadow: 0px 10px 13px -7px #000000,
+      17px 50px 9px 50px rgba(201, 201, 201, 0);
+    animation-name: comparsa-from-right;
+    animation-duration: 1s;
+  }
+  @keyframes comparsa-from-right {
+    0% {
+      left: 100%;
+      top: 110px;
+    }
+    100% {
+      left: 140px;
+      top: 110px;
+    }
+  }
+  .nav-link.dropdown-toggle:after {
+    transform: rotate(270deg);
+  }
+  .nav-link.dropdown-toggle.show:focus:after {
+    transform: rotate(90deg);
   }
 }
