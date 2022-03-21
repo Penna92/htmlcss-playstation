@@ -311,9 +311,9 @@ footer a:hover {
 
 /* ----PAGINA GIOCHI.HTML---- */
 
+/* JUMBOTRON GIOCHI.HTML*/
 #jumbotron-giochi {
-  margin-top: 100px;
-  height: calc(100vh - 100px);
+  margin-top: 116px;
   background-image: url(../img/games-wall-jumbotron.jpg);
   background-size: cover;
 }
@@ -321,9 +321,6 @@ footer a:hover {
   width: 50%;
   min-width: 250px;
   background-color: rgba(0, 0, 0, 0.9);
-}
-#jumbotron-giochi .container {
-  height: 100%;
 }
 #ps5-svg-logo {
   filter: invert(1);
@@ -334,11 +331,53 @@ footer a:hover {
 }
 #video {
   background-color: var(--white);
-  border: 2px solid var(--white);
+  border: 2px solid rgba(0, 0, 0, 0.9);
   animation: none;
 }
 #video:hover {
   box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.9) inset;
+  border: 2px solid var(--white) !important;
+  transform: none;
+}
+
+/* GIOCHI IN ARRIVO */
+#giochi-in-arrivo {
+  background-color: var(--dark-grey);
+  padding: 30px 0;
+}
+#giochi-in-arrivo > .container > .container-bg {
+  height: calc(100vh - 100px);
+  background-image: url(../img/god-of-war-ragnarok-screenshot-clean-06-en-07sept21.jpg);
+  background-size: cover;
+}
+#giochi-in-arrivo .card {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 70%;
+  margin-top: -20px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  background-color: transparent;
+}
+#giochi-in-arrivo .card img {
+  border-radius: 20px;
+}
+#giochi-in-arrivo .card:hover {
+  transform: scale(1.05);
+}
+#giochi-in-arrivo p {
+  font-size: 14px;
+}
+#read-more-info {
+  background-color: var(--white);
+  border: 2px solid var(--dark-grey);
+  animation: none;
+}
+#read-more-info:hover {
+  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.9) inset;
+  border: 2px solid var(--white) !important;
   transform: none;
 }
 
